@@ -68,5 +68,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('3999')).toEqual("MMMCMXCIX");
   });
 
+  it('converts 0 to empty string', () => {
+    expect(roman.fromDecimal('0')).toEqual("");
+  });
+
 });
 
