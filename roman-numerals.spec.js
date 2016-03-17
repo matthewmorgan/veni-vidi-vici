@@ -60,5 +60,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('1066')).toEqual("MLXVI");
   });
 
+  it('converts 1989 to MCMLXXXIX', () => {
+    expect(roman.fromDecimal('1989')).toEqual("MCMLXXXIX");
+  });
+
 });
 
