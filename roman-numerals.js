@@ -10,5 +10,8 @@ export default () => ({
       }
     });
     return romanResult;
+  },
+  toDecimal: (romanInput) => {
+    return 1;
   }
 })

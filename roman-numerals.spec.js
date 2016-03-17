@@ -74,3 +74,9 @@ describe('RomanNumerals', () => {
 
 });
 
+describe('RomanNumerals', ()=> {
+  it('converts I to 1', () => {
+    expect(roman.toDecimal('I')).toEqual(1);
+  });
+});
+
