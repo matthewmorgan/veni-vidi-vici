@@ -11,6 +11,10 @@ export default function () {
       result += 'V';
       decVal -= 5;
     }
+    if (decVal >= 4){
+      result += 'IV';
+      decVal -= 4;
+    }
     result += 'I'.repeat(decVal);
     return result;
   }

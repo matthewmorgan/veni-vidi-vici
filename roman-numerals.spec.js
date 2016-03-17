@@ -12,6 +12,10 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('2')).toEqual("II");
   });
 
+  it('converts 4 to IV', () => {
+    expect(roman.fromDecimal('4')).toEqual("IV");
+  });
+
   it('converts 5 to V', () => {
     expect(roman.fromDecimal('5')).toEqual("V");
   });
