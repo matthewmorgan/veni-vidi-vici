@@ -36,6 +36,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('20')).toEqual("XX");
   });
 
+  it('converts 40 to XL', () => {
+    expect(roman.fromDecimal('40')).toEqual("XL");
+  })
 
 });
 
