@@ -48,5 +48,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('90')).toEqual("XC");
   });
 
+  it('converts 100 to C', () => {
+    expect(roman.fromDecimal('100')).toEqual("C");
+  });
+
 });
 
