@@ -3,7 +3,7 @@ export default function () {
   function fromDecimal(n) {
     let decVal = Number(n);
     let result = '';
-    if (decVal >= 10) {
+    while (decVal >= 10) {
       result += 'X';
       decVal -= 10;
     }
