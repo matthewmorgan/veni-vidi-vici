@@ -24,6 +24,10 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('6')).toEqual("VI");
   });
 
+  it('converts 9 to IX', () => {
+    expect(roman.fromDecimal('9')).toEqual("IX");
+  });
+
   it('converts 10 to X', () => {
     expect(roman.fromDecimal('10')).toEqual("X");
   });

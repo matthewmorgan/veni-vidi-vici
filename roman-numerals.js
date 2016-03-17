@@ -7,6 +7,10 @@ export default function () {
       result += 'X';
       decVal -= 10;
     }
+    if (decVal >= 9) {
+      result += 'IX';
+      decVal -= 9;
+    }
     if (decVal >= 5) {
       result += 'V';
       decVal -= 5;
