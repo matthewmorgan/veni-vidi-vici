@@ -38,7 +38,11 @@ describe('RomanNumerals', () => {
 
   it('converts 40 to XL', () => {
     expect(roman.fromDecimal('40')).toEqual("XL");
-  })
+  });
+
+  it('converts 50 to L', () => {
+    expect(roman.fromDecimal('50')).toEqual("L");
+  });
 
 });
 
