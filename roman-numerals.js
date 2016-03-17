@@ -12,6 +12,6 @@ export default () => ({
     return romanResult;
   },
   toDecimal: (romanInput) => {
-    return 1;
+    return 1*romanInput.length;
   }
 })
