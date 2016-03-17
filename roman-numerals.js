@@ -7,15 +7,15 @@ export default function () {
       result += 'X';
       decVal -= 10;
     }
-    if (decVal >= 9) {
+    while (decVal >= 9) {
       result += 'IX';
       decVal -= 9;
     }
-    if (decVal >= 5) {
+    while (decVal >= 5) {
       result += 'V';
       decVal -= 5;
     }
-    if (decVal >= 4){
+    while (decVal >= 4){
       result += 'IV';
       decVal -= 4;
     }
