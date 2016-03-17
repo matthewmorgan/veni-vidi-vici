@@ -52,5 +52,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('100')).toEqual("C");
   });
 
+  it('converts 1000 to M', () => {
+    expect(roman.fromDecimal('1000')).toEqual("M");
+  });
+
 });
 
