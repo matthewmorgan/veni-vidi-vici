@@ -19,7 +19,11 @@ export default function () {
       result += 'IV';
       decVal -= 4;
     }
-    result += 'I'.repeat(decVal);
+    while (decVal >= 1){
+      result += 'I';
+      decVal -= 1;
+    }
+
     return result;
   }
 
