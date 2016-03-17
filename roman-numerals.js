@@ -1,6 +1,6 @@
 export default function () {
 
-  const DIGITS = new Map([[10, 'X']]);
+  const DIGITS = new Map([[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']]);
 
   function fromDecimal(n) {
     let decVal = Number(n);
@@ -11,24 +11,6 @@ export default function () {
         decVal -= decimal;
       }
     });
-
-    while (decVal >= 9) {
-      result += 'IX';
-      decVal -= 9;
-    }
-    while (decVal >= 5) {
-      result += 'V';
-      decVal -= 5;
-    }
-    while (decVal >= 4) {
-      result += 'IV';
-      decVal -= 4;
-    }
-    while (decVal >= 1) {
-      result += 'I';
-      decVal -= 1;
-    }
-
     return result;
   }
 
