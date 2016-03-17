@@ -1,14 +1,20 @@
-export default function(){
+export default function () {
 
-  function fromDecimal(decVal){
+  function fromDecimal(n) {
+    let decVal = Number(n);
     let result = '';
-    if (decVal >= '5') {
-      result += "V";
+    if (decVal >= 10) {
+      result += 'X';
+      decVal -= 10;
+    }
+    if (decVal >= 5) {
+      result += 'V';
       decVal -= 5;
     }
-    result += "I".repeat(decVal);
+    result += 'I'.repeat(decVal);
     return result;
   }
 
-  return { fromDecimal };
+  return {fromDecimal};
+
 }

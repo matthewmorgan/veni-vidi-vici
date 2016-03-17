@@ -20,5 +20,9 @@ describe('RomanNumerals', () => {
     expect(roman.fromDecimal('6')).toEqual("VI");
   });
 
+  it('converts 10 to X', () => {
+    expect(roman.fromDecimal('10')).toEqual("X");
+  });
+
 });
 
