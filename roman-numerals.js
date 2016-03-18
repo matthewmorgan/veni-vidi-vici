@@ -29,7 +29,7 @@ export default class RomanNumerals {
   }
 
   toDecimal(n) {
-    let romanDigits = n.split('');
+    let romanDigits = [...n];
     let decimalResult = 0;
 
     while (romanDigits.length > 0) {
