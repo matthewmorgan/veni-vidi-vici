@@ -108,5 +108,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('XX')).toEqual(20);
   });
 
+  it('converts XL to 40', () => {
+    expect(roman.toDecimal('XL')).toEqual(40);
+  });
+
 });
 
