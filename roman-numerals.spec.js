@@ -84,5 +84,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('II')).toEqual(2);
   });
 
+  it('converts IV to 4', () => {
+    expect(roman.toDecimal('IV')).toEqual(4);
+  });
+
 });
 
