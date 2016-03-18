@@ -140,5 +140,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('MMMCMXCIX')).toEqual(3999);
   });
 
+  it('converts empty string to 0', () => {
+    expect(roman.toDecimal('')).toEqual(0);
+  });
+
 });
 
