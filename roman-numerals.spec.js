@@ -128,5 +128,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('M')).toEqual(1000);
   });
 
+  it('converts MLXVI to 1066', () => {
+    expect(roman.toDecimal('MLXVI')).toEqual(1066);
+  });
+
 });
 
