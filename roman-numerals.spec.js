@@ -100,5 +100,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('IX')).toEqual(9);
   });
 
+  it('converts X to 10', () => {
+    expect(roman.toDecimal('X')).toEqual(10);
+  });
+
 });
 

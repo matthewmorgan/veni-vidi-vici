@@ -15,6 +15,11 @@ export default () => ({
     let decimalResult = 0;
     let romanDigits = romanInput.split('');
 
+    if (romanDigits.slice(0, 1).join('') === 'X') {
+      decimalResult += 10;
+      romanDigits.shift();
+    }
+
     if (romanDigits.slice(0, 2).join('') === 'IX') {
       decimalResult += 9;
       romanDigits.shift();
