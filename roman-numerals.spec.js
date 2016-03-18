@@ -88,5 +88,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('IV')).toEqual(4);
   });
 
+  it('converts V to 5', () => {
+    expect(roman.toDecimal('V')).toEqual(5);
+  });
+
 });
 

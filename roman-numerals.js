@@ -13,6 +13,7 @@ export default () => ({
   },
   toDecimal: (romanInput) => {
     if (romanInput.slice(0,2) === 'IV') return 4;
+    if (romanInput.slice(0,1) === 'V') return 5;
     return 1*romanInput.length;
   }
 })
