@@ -136,5 +136,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('MCMLXXXIX')).toEqual(1989);
   });
 
+  it('converts MMMCMXCIX to 3999', () => {
+    expect(roman.toDecimal('MMMCMXCIX')).toEqual(3999);
+  });
+
 });
 
