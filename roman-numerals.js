@@ -14,8 +14,7 @@ const DIGITS = new Map([
 
 export default class RomanNumerals {
 
-  fromDecimal(n) {
-    let decimalInput = Number(n);
+  fromDecimal(decimalInput = Number(n)) {
     let romanResult = '';
 
     DIGITS.forEach((romanSymbol, decimalValue) => {
@@ -28,8 +27,7 @@ export default class RomanNumerals {
     return romanResult;
   }
 
-  toDecimal(n) {
-    let romanDigits = [...n];
+  toDecimal([...romanDigits]) {
     let decimalResult = 0;
 
     while (romanDigits.length > 0) {
