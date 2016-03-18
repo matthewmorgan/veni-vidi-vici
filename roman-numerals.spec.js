@@ -112,5 +112,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('XL')).toEqual(40);
   });
 
+  it('converts L to 50', () => {
+    expect(roman.toDecimal('L')).toEqual(50);
+  });
+
 });
 

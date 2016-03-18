@@ -15,6 +15,11 @@ export default () => ({
     let decimalResult = 0;
     let romanDigits = romanInput.split('');
 
+    while (romanDigits.slice(0, 1).join('') === 'L') {
+      decimalResult += 50;
+      romanDigits.shift();
+    }
+
     while (romanDigits.slice(0, 2).join('') === 'XL') {
       decimalResult += 40;
       romanDigits.shift();
