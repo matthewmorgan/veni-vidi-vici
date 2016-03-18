@@ -11,9 +11,20 @@ export default () => ({
     });
     return romanResult;
   },
-  toDecimal: (romanInput) => {
-    if (romanInput.slice(0,2) === 'IV') return 4;
-    if (romanInput.slice(0,1) === 'V') return 5;
-    return 1*romanInput.length;
+  toDecimal:   (romanInput) => {
+    let decimalResult = 0;
+    let romanDigits = romanInput.split('');
+
+    if (romanDigits.slice(0, 1).join('') === 'V') {
+      decimalResult += 5;
+      romanDigits.shift();
+    }
+    if (romanDigits.slice(0, 2).join('') === 'IV') {
+      decimalResult += 4;
+      romanDigits.shift();
+      romanDigits.shift();
+    }
+    decimalResult += romanDigits.length;
+    return decimalResult;
   }
 })

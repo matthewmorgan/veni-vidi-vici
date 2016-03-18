@@ -92,5 +92,10 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('V')).toEqual(5);
   });
 
+  it('converts VI to 6', () => {
+    expect(roman.toDecimal('VI')).toEqual(6);
+  });
+
+
 });
 
