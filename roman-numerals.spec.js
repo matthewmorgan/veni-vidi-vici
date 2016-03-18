@@ -124,5 +124,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('C')).toEqual(100);
   });
 
+  it('converts M to 1000', () => {
+    expect(roman.toDecimal('M')).toEqual(1000);
+  });
+
 });
 
