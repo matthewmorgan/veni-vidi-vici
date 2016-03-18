@@ -15,7 +15,7 @@ export default () => ({
     let decimalResult = 0;
     let romanDigits = romanInput.split('');
 
-    if (romanDigits.slice(0, 2).join('') === 'XL') {
+    while (romanDigits.slice(0, 2).join('') === 'XL') {
       decimalResult += 40;
       romanDigits.shift();
       romanDigits.shift();
@@ -26,23 +26,25 @@ export default () => ({
       romanDigits.shift();
     }
 
-    if (romanDigits.slice(0, 2).join('') === 'IX') {
+    while (romanDigits.slice(0, 2).join('') === 'IX') {
       decimalResult += 9;
       romanDigits.shift();
       romanDigits.shift();
     }
 
-    if (romanDigits.slice(0, 1).join('') === 'V') {
+    while (romanDigits.slice(0, 1).join('') === 'V') {
       decimalResult += 5;
       romanDigits.shift();
     }
-    if (romanDigits.slice(0, 2).join('') === 'IV') {
+    while (romanDigits.slice(0, 2).join('') === 'IV') {
       decimalResult += 4;
       romanDigits.shift();
       romanDigits.shift();
     }
-
-    decimalResult += romanDigits.length;
+    while(romanDigits.length >0){
+      decimalResult += 1;
+      romanDigits.shift();
+    }
     return decimalResult;
   }
 })
