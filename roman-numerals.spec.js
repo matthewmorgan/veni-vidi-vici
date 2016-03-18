@@ -96,6 +96,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('VI')).toEqual(6);
   });
 
+  it('converts IX to 9', () => {
+    expect(roman.toDecimal('IX')).toEqual(9);
+  });
 
 });
 
