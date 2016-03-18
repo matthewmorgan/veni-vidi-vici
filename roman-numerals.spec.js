@@ -120,5 +120,9 @@ describe('RomanNumerals', ()=> {
     expect(roman.toDecimal('XC')).toEqual(90);
   });
 
+  it('converts C to 100', () => {
+    expect(roman.toDecimal('C')).toEqual(100);
+  });
+
 });
 
