@@ -1,4 +1,6 @@
 const DIGITS = new Map([[1000, 'M'], [900, 'CM'], [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']]);
+const SYMBOLS = new Map();
+DIGITS.forEach((romanSymbol, decimalValue) => SYMBOLS.set(romanSymbol, decimalValue));
 
 export default () => ({
   fromDecimal: (decimalInput = Number(n)) => {
@@ -15,41 +17,15 @@ export default () => ({
     let decimalResult = 0;
     let romanDigits = romanInput.split('');
 
-    while (romanDigits.slice(0, 1).join('') === 'L') {
-      decimalResult += 50;
-      romanDigits.shift();
+    while (romanDigits.length > 0) {
+      SYMBOLS.forEach((decimalValue, romanSymbol) => {
+        if (romanDigits.slice(0, romanSymbol.length).join('') === romanSymbol) {
+          decimalResult += decimalValue;
+          romanDigits.splice(0, romanSymbol.length);
+        }
+      });
     }
 
-    while (romanDigits.slice(0, 2).join('') === 'XL') {
-      decimalResult += 40;
-      romanDigits.shift();
-      romanDigits.shift();
-    }
-
-    while (romanDigits.slice(0, 1).join('') === 'X') {
-      decimalResult += 10;
-      romanDigits.shift();
-    }
-
-    while (romanDigits.slice(0, 2).join('') === 'IX') {
-      decimalResult += 9;
-      romanDigits.shift();
-      romanDigits.shift();
-    }
-
-    while (romanDigits.slice(0, 1).join('') === 'V') {
-      decimalResult += 5;
-      romanDigits.shift();
-    }
-    while (romanDigits.slice(0, 2).join('') === 'IV') {
-      decimalResult += 4;
-      romanDigits.shift();
-      romanDigits.shift();
-    }
-    while(romanDigits.length >0){
-      decimalResult += 1;
-      romanDigits.shift();
-    }
     return decimalResult;
   }
 })
